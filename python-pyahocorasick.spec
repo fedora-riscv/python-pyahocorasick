@@ -9,6 +9,10 @@ License:        BSD-3-Clause AND LicenseRef-Fedora-Public-Domain
 URL:            https://github.com/WojciechMula/pyahocorasick
 Source:         %url/archive/%{version}/%{pypi_name}-%{version}.tar.gz
 
+# https://github.com/WojciechMula/pyahocorasick/issues/142
+# https://github.com/WojciechMula/pyahocorasick/blob/master/README.rst
+ExclusiveArch:  x86_64 %{arm64} ppc64le
+
 BuildRequires:  gcc
 BuildRequires:  python3-devel
 BuildRequires:  python3dist(pytest)
