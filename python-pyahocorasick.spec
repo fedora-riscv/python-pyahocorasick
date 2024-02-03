@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:        2.0.0
-Release:        %autorelease
+Release:        %autorelease -e rv64
 Summary:        Python module (C extension and plain Python) implementing Aho-Corasick algorithm
 
 License:        BSD-3-Clause AND LicenseRef-Fedora-Public-Domain
@@ -11,7 +11,7 @@ Source:         %url/archive/%{version}/%{pypi_name}-%{version}.tar.gz
 
 # https://github.com/WojciechMula/pyahocorasick/issues/142
 # https://github.com/WojciechMula/pyahocorasick/blob/master/README.rst
-ExclusiveArch:  x86_64 %{arm64} ppc64le
+ExclusiveArch:  x86_64 %{arm64} ppc64le riscv64
 
 BuildRequires:  gcc
 BuildRequires:  python3-devel
